@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.abspath("../carfi_lib"))
+sys.path.append(os.path.abspath("../lib"))
 from dir_format import *
 
 [playBackDir, dataDir, file_name] = dir_format(sys.argv[1], sys.argv[2])

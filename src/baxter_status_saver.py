@@ -2,7 +2,7 @@
 import rospy
 import os
 import sys
-sys.path.append(os.path.abspath("../carfi_lib"))
+sys.path.append(os.path.abspath("../lib"))
 
 from exist_check import *
 from baxter_interface import Limb
