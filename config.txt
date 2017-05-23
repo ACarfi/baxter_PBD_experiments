@@ -1,0 +1,16 @@
+# This is a configuration file for the baxter_PBD_experiments package.
+
+# contact: alessandro.carfi@dibris.unige.it
+
+# first line indicates the path where all the recordings should be stored,
+# if it does not exist is going to be created. The second line indicates
+# the structure of file names that will be created while recording. It is 
+# important that the blocks are semparated by '_' and that '#' is in place
+# of paramters inserted by keyboard. All the lines exept to these two should
+# start with '#' or be empty.
+
+/home/alessandro/ros_ws/recordings/
+
+
+   
+Group_#_Volunteer_#.txt
