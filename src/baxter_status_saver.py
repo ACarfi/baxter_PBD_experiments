@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.abspath("../lib"))
 
-from exist_check import *
+from file_manager import *
 from baxter_interface import Limb
 from baxter_interface import Gripper
 

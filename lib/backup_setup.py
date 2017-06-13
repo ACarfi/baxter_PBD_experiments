@@ -1,10 +1,11 @@
 from file_manager import dir_check
 from file_manager import extension_remove
 from file_manager import read_config
+from file_manager import file_check
 import sys
 
 
-def dir_format(terminal_input):
+def backup_setup(terminal_input):
 
     config_lines = read_config()
 

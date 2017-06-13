@@ -1,11 +1,9 @@
-import sys
 import os
+import sys
 sys.path.append(os.path.abspath("../lib"))
-from dir_format import *
+from player_setup import *
 
-[playBackDir, dataDir, file_name] = dir_format(sys.argv[1], sys.argv[2])
-
-playBackPath = playBackDir + '/' + file_name
+[playBackPath] = player_setup(sys.argv[1:])
 
 command_1 = 'rosrun baxter_interface joint_trajectory_action_server.py --mode velocity'
 command_2 = 'rosrun baxter_examples joint_trajectory_file_playback.py -f ' + playBackPath
@@ -20,5 +18,5 @@ kill_2 = 'rosnode kill /rsdk_velocity_joint_trajectory_action_server'
 os.system(kill_1)
 os.system(kill_2)
 
-command_rest = 'rosrun baxter_tools tuck_arms.py -u'
+command_rest = 'rosrun custom_baxter_tools tuck_arms.py -u'
 os.system(command_rest)

@@ -27,14 +27,11 @@ def dir_check(dir_name):
 
 
 def file_check(check_file_name):
-
     config_lines = read_config()
     name_structure = extension_remove(config_lines[1], 'txt')
-
     name = check_file_name.split('/')
     check_directory = name[0:-1]
     check_directory = '/'.join([j for j in check_directory])
-
     name = name[-1]
     name = extension_remove(name, 'txt')
 

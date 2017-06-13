@@ -1,9 +1,9 @@
 import sys
 import os
 sys.path.append(os.path.abspath("../lib"))
-from dir_format import *
+from backup_setup import *
 
-[playBackDir, dataDir, file_name] = dir_format(sys.argv[1:])
+[playBackDir, dataDir, file_name] = backup_setup(sys.argv[1:])
 
 playBackPath = playBackDir + '/' + file_name
 
