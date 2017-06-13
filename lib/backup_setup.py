@@ -1,8 +1,12 @@
 from file_manager import dir_check
 from file_manager import extension_remove
 from file_manager import read_config
-from file_manager import file_check
 import sys
+
+# This function receives the terminal inputs and matches them with the number of input required by
+# the configuration file (config.txt). If the number of inputs is correct creates the file name otherwise
+# returns and error. Furthermore this function checks if the PlayBack and Data folders exist in the
+# path indicated by the configuration files, if not the two folder are created.
 
 
 def backup_setup(terminal_input):

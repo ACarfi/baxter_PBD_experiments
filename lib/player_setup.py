@@ -4,6 +4,13 @@ import sys
 from file_manager import read_config
 from file_manager import extension_remove
 
+# This function receives as input the terminal inputs and matches them with the number of input required by
+# the configuration file (config.txt). If the number of inputs is correct creates the file name otherwise
+# returns and error. Once the name of the file to be played the function checks if exist different versions
+# of the same function, differentiate by a number located at the end of the file name. If this is the case
+# all the alternatives are displayed and the user is required to select one version. The name of the selected
+# file is returned as output.
+
 
 def player_setup(terminal_input):
     config_lines = read_config()

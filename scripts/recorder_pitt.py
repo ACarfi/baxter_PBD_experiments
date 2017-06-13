@@ -1,11 +1,19 @@
 import os
+import sys
 import time
-from shutil import copyfile
+
+sys.path.append(os.path.abspath("../lib"))
 from backup_setup import *
+from file_manager import file_check
+from shutil import copyfile
+
 
 [playBackDir, dataDir, file_name] = backup_setup(sys.argv[1:])
 
-playBackPath = playBackDir + '/' + file_name
+playBackPath = playBackDir + file_name
+playBackPath = file_check(playBackPath)
+
+
 if os.path.isfile('../.pbd2_log.txt'):
     os.remove('../.pbd2_log.txt')
 

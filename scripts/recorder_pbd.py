@@ -9,13 +9,10 @@ from file_manager import file_check
 playBackPath = playBackDir + file_name
 playBackPath = file_check(playBackPath)
 
-if os.path.isfile('../.pbd2_log.txt'):
-    os.remove('../.pbd2_log.txt')
-
 
 command_1 = 'rosrun pbd2 pbd2'
 
-os.system('xterm -iconic -l -lf ../.pbd2_log.txt -e ' + command_1 + ' & exit 1')
+os.system('xterm -iconic -e ' + command_1 + ' & exit 1')
 
 command_1 = 'rosrun baxter_examples joint_recorder.py -f ' + playBackPath
 command_2 = 'rosrun baxter_PBD_experiments baxter_status_saver.py ' + dataDir + ' ' + file_name

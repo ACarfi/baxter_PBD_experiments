@@ -1,5 +1,11 @@
 import os
 
+# A collection of function for files manipulation.
+
+
+# read_config filters out from the config.txt file all the empty lines and the lines containing comments
+# and returns the content of the file.
+
 
 def read_config():
     with open('../config.txt') as f:
@@ -11,6 +17,9 @@ def read_config():
     return filtered_file_lines
 
 
+# extension_remove removes the given extension from a file
+
+
 def extension_remove(name, extension):
     name = name.split('_')
     name_end = name[-1]
@@ -20,10 +29,18 @@ def extension_remove(name, extension):
     return name
 
 
+# dir_check checks if it exist the directory given as input and in case it does not exist it is
+# created
+
+
 def dir_check(dir_name):
     if not(os.path.isdir(dir_name)):
         print('creating ' + dir_name)
         os.mkdir(dir_name)
+
+
+# file_check manages files name and prevents two files to have the same name by adding crescent numbers
+# at the end of the file name
 
 
 def file_check(check_file_name):

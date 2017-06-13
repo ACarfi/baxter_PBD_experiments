@@ -1,11 +1,13 @@
-import sys
 import os
+import sys
 sys.path.append(os.path.abspath("../lib"))
 from backup_setup import *
+from file_manager import file_check
 
 [playBackDir, dataDir, file_name] = backup_setup(sys.argv[1:])
 
-playBackPath = playBackDir + '/' + file_name
+playBackPath = playBackDir + file_name
+playBackPath = file_check(playBackPath)
 
 command_1 = 'rosrun baxter_examples joint_recorder.py -f ' + playBackPath
 command_2 = 'rosrun baxter_examples gripper_keyboard.py'
