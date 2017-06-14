@@ -32,7 +32,9 @@ def player_setup(terminal_input):
 
     possible_files = []
     ids = 1
-    for files in os.listdir(playback_dir):
+    files_list = sorted(os.listdir(playback_dir))
+
+    for files in files_list:
         if fnmatch.fnmatch(files, file_name):
             possible_files.append(files)
             print(str(ids) + ': ' + files)
