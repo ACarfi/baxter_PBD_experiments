@@ -8,6 +8,7 @@ close_gripper = 'rostopic pub -1 /robot/end_effector/left_gripper/command baxter
 untuck = 'rosrun custom_baxter_tools tuck_arms.py -u'
 
 print 'reaching untuck position'
-os.system('xterm -iconic -e ' + untuck)print 'opening gripper'
+os.system('xterm -iconic -e ' + untuck)
 
+print 'opening gripper'
 os.system('xterm -iconic -e ' + open_gripper)
