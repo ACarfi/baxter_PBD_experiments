@@ -12,4 +12,4 @@
 /home/alessandro/ros_ws/recordings/
 
 
-Group_#_Volunteer_#.txt
+Group_#_#_Volunteer_#.txt
